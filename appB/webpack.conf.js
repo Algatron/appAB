@@ -1,19 +1,20 @@
-
 let path = require('path');
 module.exports = {
     "devtool": "source-map",
     "output": {
         "path": path.resolve("./dist/"),
         "filename": "[name].js",
-        "sourceMapFilename": "[file].map"
+        "sourceMapFilename": "[file].map",
+        // "library": "appB",
+        // "libraryTarget": "umd",
+        // "umdNamedDefine": true
     },
-    "externals": {
-        "appA": {
-            commonjs: "appA",
-            commonjs2: "appA",
-            amd: "appA",
-            root: "appA",
-            var: "appA"
+    externals: {
+        appA: {
+            var: 'appA',
+            commonjs: 'appA',
+            commonjs2: 'appA',
+            amd: 'appA'
         }
     },
     "mode": "development",
@@ -33,16 +34,14 @@ module.exports = {
         ]
     },
     "resolve": {
-        "modules": [
-            './',
-            "node_modules",
-        ],
         "extensions": [
             ".ts",
             ".js"
         ]
     },
-    "entry": './Child.ts',
+    "entry": {
+        appB: './entry.ts',
+    },
     "optimization": {
         "runtimeChunk": "single",
         "splitChunks": {
