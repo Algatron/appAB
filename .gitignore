@@ -1,0 +1,4 @@
+appA/node_modules/*
+appB/node_modules/*
+!appB/node_modules/appA
+

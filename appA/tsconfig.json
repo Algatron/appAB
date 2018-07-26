@@ -1,0 +1,25 @@
+{
+    "exclude": [
+        "types/**/*",
+        "dist/**/*"
+    ],
+    "compilerOptions": {
+        "target": "es5",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "baseUrl": "./",
+        "lib": [
+            "dom",
+            "es5",
+            "scripthost",
+            "es2015",
+            "es2015.iterable"
+        ],
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "declaration": true,
+        "declarationDir": "./types/app",
+        "sourceMap": true,
+        "noImplicitAny": true,
+    }
+}
