@@ -1,8 +1,3 @@
-const WebpackRequireFrom = require('webpack-require-from');
-const webpackRequireFromConfig = {
-    methodName: "getChunkUrl"
-};
-
 let path = require('path');
 module.exports = {
     "devtool": "source-map",
@@ -40,9 +35,6 @@ module.exports = {
             ".js"
         ]
     },
-    "plugins": [
-        new WebpackRequireFrom(webpackRequireFromConfig)
-    ],
     "entry": './entry.ts',
     "optimization": {
         // "runtimeChunk": "single",

@@ -1,15 +1,49 @@
+(window["webpackJsonpappA"] = window["webpackJsonpappA"] || []).push([[0],{
+
+/***/ "../appB/dist/appB.js":
+/*!****************************!*\
+  !*** ../appB/dist/appB.js ***!
+  \****************************/
+/*! no static exports found */
+/***/ (function(module, exports) {
+
 (window["webpackJsonp"] = window["webpackJsonp"] || []).push([["appB"],{
 
-/***/ "./Child.ts-exposed":
-/*!**************************!*\
-  !*** ./Child.ts-exposed ***!
-  \**************************/
-/*! no static exports found */
-/***/ (function(module, exports, __webpack_require__) {
+/***/ "./Child.ts":
+/*!******************!*\
+  !*** ./Child.ts ***!
+  \******************/
+/*! exports provided: Child */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
 
-/* WEBPACK VAR INJECTION */(function(global) {if(!global["child!expose-loader?window"]) global["child!expose-loader?window"] = {};
-module.exports = global["child!expose-loader?window"]["child2"] = __webpack_require__(/*! -!./node_modules/awesome-typescript-loader/dist/entry.js??ref--5-0!./Child.ts */ "./node_modules/awesome-typescript-loader/dist/entry.js?!./Child.ts");
-/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__(/*! ./node_modules/webpack/buildin/global.js */ "./node_modules/webpack/buildin/global.js")))
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Child", function() { return Child; });
+/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
+/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ "./component.ts");
+var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+
+
+var Child = /** @class */ (function () {
+    function Child() {
+    }
+    Child = __decorate([
+        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
+            declarations: [
+                _component__WEBPACK_IMPORTED_MODULE_1__["CompB"]
+            ],
+            providers: []
+        })
+    ], Child);
+    return Child;
+}());
+
+
 
 /***/ }),
 
@@ -63,15 +97,15 @@ var CompB = /** @class */ (function () {
 /*!******************!*\
   !*** ./entry.ts ***!
   \******************/
-/*! no static exports found */
+/*! exports provided: Child */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Child__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Child */ "./Child.ts-exposed");
-/* harmony import */ var _Child__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_Child__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony reexport (unknown) */ for(var __WEBPACK_IMPORT_KEY__ in _Child__WEBPACK_IMPORTED_MODULE_0__) if(__WEBPACK_IMPORT_KEY__ !== 'default') (function(key) { __webpack_require__.d(__webpack_exports__, key, function() { return _Child__WEBPACK_IMPORTED_MODULE_0__[key]; }) }(__WEBPACK_IMPORT_KEY__));
-window.x = 1;
+/* harmony import */ var _Child__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Child */ "./Child.ts");
+/* harmony reexport (safe) */ __webpack_require__.d(__webpack_exports__, "Child", function() { return _Child__WEBPACK_IMPORTED_MODULE_0__["Child"]; });
+
+
 
 
 
@@ -100,50 +134,6 @@ webpackEmptyAsyncContext.id = "./node_modules/@angular/core/fesm5 lazy recursive
 
 /***/ }),
 
-/***/ "./node_modules/awesome-typescript-loader/dist/entry.js?!./Child.ts":
-/*!***********************************************************************************!*\
-  !*** ./node_modules/awesome-typescript-loader/dist/entry.js??ref--5-0!./Child.ts ***!
-  \***********************************************************************************/
-/*! exports provided: Child */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Child", function() { return Child; });
-/* harmony import */ var _angular_core__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @angular/core */ "./node_modules/@angular/core/fesm5/core.js");
-/* harmony import */ var _component__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./component */ "./component.ts");
-/* harmony import */ var appA__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! appA */ "appA");
-/* harmony import */ var appA__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(appA__WEBPACK_IMPORTED_MODULE_2__);
-var __decorate = (undefined && undefined.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-
-
-
-var Child = /** @class */ (function () {
-    function Child() {
-    }
-    Child = __decorate([
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["NgModule"])({
-            declarations: [
-                _component__WEBPACK_IMPORTED_MODULE_1__["CompB"]
-            ],
-            providers: [
-                appA__WEBPACK_IMPORTED_MODULE_2__["Service"]
-            ]
-        }),
-        Object(_angular_core__WEBPACK_IMPORTED_MODULE_0__["Injectable"])()
-    ], Child);
-    return Child;
-}());
-
-
-
-/***/ }),
-
 /***/ "appA":
 /*!*********************************************************************************!*\
   !*** external {"var":"appA","commonjs":"appA","commonjs2":"appA","amd":"appA"} ***!
@@ -157,3 +147,8 @@ module.exports = appA;
 
 },[["./entry.ts","runtime","vendor"]]]);
 //# sourceMappingURL=appB.js.map
+
+/***/ })
+
+}]);
+//# sourceMappingURL=0.js.map

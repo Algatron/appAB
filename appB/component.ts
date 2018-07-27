@@ -8,7 +8,7 @@ import { Service } from 'appA';
     `
 })
 @Injectable()
-export class CompB {
+export class CompB implements OnInit {
 
     constructor(private service: Service) {
     }

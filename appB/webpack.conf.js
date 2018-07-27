@@ -4,10 +4,7 @@ module.exports = {
     "output": {
         "path": path.resolve("./dist/"),
         "filename": "[name].js",
-        "sourceMapFilename": "[file].map",
-        // "library": "appB",
-        // "libraryTarget": "umd",
-        // "umdNamedDefine": true
+        "sourceMapFilename": "[file].map"
     },
     externals: {
         appA: {
@@ -21,6 +18,13 @@ module.exports = {
     "module": {
         "rules": [
             {
+                test: require.resolve('./Child.ts'),
+                // test: require.resolve('./Child.ts'),
+                use: [{
+                  loader: 'expose-loader?child!expose-loader?window.child2',
+                }]
+            },
+            {
                 "test": /\.ts$/,
                 "use": [
                     {
@@ -30,7 +34,7 @@ module.exports = {
                         }
                     }
                 ]
-            }
+            },
         ]
     },
     "resolve": {
