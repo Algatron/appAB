@@ -9,6 +9,14 @@ module.exports = {
         "libraryTarget": "umd",
         "umdNamedDefine": true
     },
+    externals: {
+        appB: {
+            var: 'appB',
+            commonjs: 'appB',
+            commonjs2: 'appB',
+            amd: 'appB'
+        }
+    },
     "mode": "development",
     "module": {
         "rules": [
@@ -35,9 +43,9 @@ module.exports = {
             ".js"
         ]
     },
-    "entry": './entry.ts',
+    "entry": './a.entry.ts',
     "optimization": {
-        // "runtimeChunk": "single",
+        "runtimeChunk": "single",
         "splitChunks": {
             "cacheGroups": {
                 "vendor": {

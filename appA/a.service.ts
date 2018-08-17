@@ -3,14 +3,14 @@ import { Injectable } from "@angular/core";
 @Injectable({
     providedIn: 'root'
 })
-export class Service {
+export class AService {
 
     constructor() {
-        console.info("bla");
+        console.info("appA.AService.contructor");
     }
 
     print() {
-        console.info('test');
+        console.info('appA.AService.print() called');
     }
 
 }

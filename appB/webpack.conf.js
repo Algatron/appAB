@@ -4,7 +4,9 @@ module.exports = {
     "output": {
         "path": path.resolve("./dist/"),
         "filename": "[name].js",
-        "sourceMapFilename": "[file].map"
+        "sourceMapFilename": "[file].map",
+        "library": "appA",
+        "libraryTarget": "var"
     },
     externals: {
         appA: {
@@ -17,13 +19,13 @@ module.exports = {
     "mode": "development",
     "module": {
         "rules": [
-            {
-                test: require.resolve('./Child.ts'),
-                // test: require.resolve('./Child.ts'),
-                use: [{
-                  loader: 'expose-loader?child!expose-loader?window.child2',
-                }]
-            },
+            // {
+            //     test: require.resolve('./Child.ts'),
+            //     // test: require.resolve('./Child.ts'),
+            //     use: [{
+            //       loader: 'expose-loader?child!expose-loader?window.child2',
+            //     }]
+            // },
             {
                 "test": /\.ts$/,
                 "use": [
@@ -44,7 +46,7 @@ module.exports = {
         ]
     },
     "entry": {
-        appB: './entry.ts',
+        appB: './b.entry.ts',
     },
     "optimization": {
         "runtimeChunk": "single",

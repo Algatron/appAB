@@ -1,5 +1,5 @@
 
-export class Service {
+export class AService {
     constructor();
     print(): void;
 }
